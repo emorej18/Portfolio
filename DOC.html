@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLags Portfolio</title>
+    <style>
+        /* Reset styles */
+        body, h1, h2, h3, p, ul, li, form {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background */
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: #cceeff; /* White with a blue tint */
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Video Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #cceeff;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #66b2ff;
+        }
+
+        /* About Section */
+        section#about {
+            text-align: center;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        section#about img {
+            border-radius: 50%;
+            margin-top: 20px;
+            width: 150px;
+            border: 3px solid #cceeff;
+        }
+
+        /* Contact Section */
+        section#contact {
+            margin-top: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form input, form textarea, form button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #66b2ff;
+            color: #000;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #3388cc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        footer a {
+            color: #cceeff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #66b2ff;
+        }
+
+        footer p {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/OJAvgHSeIhI?autoplay=1&mute=1&loop=1&playlist=OJAvgHSeIhI" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>JLags Portfolio</h1>
+        <p>My name is Jerome Llano Laguardia, you can call me Jerome or Je. I’m 19 years old (turning 20 soon). I love cooking, sightseeing, and gaming with friends. I'm shy but responsible, and I can keep secrets forever.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Jerome Laguardia, a 2nd-year student at CVSU-CCC.</p>
+        <img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/473757743_4026718577649452_7328311683065185304_n.jpg" alt="Jerome Laguardia">
+        <h3>Skills</h3>
+        <ul>
+            <li>Asking AI for help</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, fill out the form below:</p>
+        <form action="submit_form.php" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" value="Jeromelaguaria@gmail.com" required>
+            <input type="tel" id="phone" name="phone" value="09562145142" required>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Follow Me</h3>
+        <ul>
+            <li><a href="https://www.facebook.com/BREADsticks0.0/" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/andremotoh/" target="_blank">Instagram</a></li>
+        </ul>
+        <p>&copy; 2025 Jerome Llano Laguardia. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
